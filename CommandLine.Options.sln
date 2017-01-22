@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DD05D639-C378-42BD-B9D1-79AACD34197D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{26631567-06CD-40F1-AD83-10A49D79217F}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "CommandLine.Options", "src\CommandLine.Options\CommandLine.Options.xproj", "{6CACC4D9-AB42-401E-AA8A-C57D817C4386}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CACC4D9-AB42-401E-AA8A-C57D817C4386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CACC4D9-AB42-401E-AA8A-C57D817C4386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CACC4D9-AB42-401E-AA8A-C57D817C4386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CACC4D9-AB42-401E-AA8A-C57D817C4386}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6CACC4D9-AB42-401E-AA8A-C57D817C4386} = {DD05D639-C378-42BD-B9D1-79AACD34197D}
+	EndGlobalSection
+EndGlobal
