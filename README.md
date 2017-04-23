@@ -1,4 +1,6 @@
- NDesk.Options.OptionSet is built upon a key/value table, where the
+[![Build status](https://ci.appveyor.com/api/projects/status/aux2774o26tohc81?svg=true)](https://ci.appveyor.com/project/Siliconrob/commandline-options) 
+
+NDesk.Options.OptionSet is built upon a key/value table, where the
  key is a option format string and the value is a delegate that is 
  invoked when the format string is matched.
 
