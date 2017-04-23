@@ -16,6 +16,7 @@
     <Description>Modernizination of NDesk options</Description>
     <RepositoryUrl>https://github.com/Siliconrob/CommandLine.Options</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/Siliconrob/CommandLine.Options/blob/master/LICENSE.md</PackageLicenseUrl>
+    <Version>0.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
