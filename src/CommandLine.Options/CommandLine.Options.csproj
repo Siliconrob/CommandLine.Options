@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyTitle>CommandLine.Options</AssemblyTitle>
+    <VersionPrefix>0.0.1</VersionPrefix>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <AssemblyName>CommandLine.Options</AssemblyName>
+    <PackageId>CommandLine.Options</PackageId>
+    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
+    <PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>SiliconRob</Authors>
+    <Description>Modernizination of NDesk options</Description>
+    <RepositoryUrl>https://github.com/Siliconrob/CommandLine.Options</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/Siliconrob/CommandLine.Options/blob/master/LICENSE.md</PackageLicenseUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.TypeConverter" Version="4.1.0" />
+  </ItemGroup>
+
+</Project>

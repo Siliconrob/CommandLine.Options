@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>CommandLine.Options</id>
+    <version>0.0.1</version>
+    <authors>SiliconRob</authors>
+    <owners>SiliconRob</owners>
+    <projectUrl>https://github.com/Siliconrob/CommandLine.Options</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Command line options parser from NDesk.Options update</description>
+    <releaseNotes>Initial release</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>Command line args, NDesk.Options</tags>
+    <dependencies>
+        <group targetFramework=".NETStandard1.6">
+			<dependency id="NETStandard.Library" version="[1.6.0, )" />
+			<dependency id="System.ComponentModel.TypeConverter" version="[4.1.0, )" />
+		</group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/**/*.*" target="lib" />
+  </files>  
+</package>
