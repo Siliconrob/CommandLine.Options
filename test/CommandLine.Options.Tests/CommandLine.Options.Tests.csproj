@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\CommandLine.Options\CommandLine.Options.csproj" />
+    <ProjectReference Include="..\..\src\CommandLine.Options\CommandLine.Options.csproj" />
   </ItemGroup>
 
   <ItemGroup>
