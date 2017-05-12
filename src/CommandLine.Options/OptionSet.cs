@@ -106,9 +106,7 @@ namespace CommandLine.Options
       public ActionOption(string prototype, string description, int count, Action<OptionValueCollection> action)
         : base(prototype, description, count)
       {
-        if (action == null)
-          throw new ArgumentNullException(nameof(action));
-        this.action = action;
+	      this.action = action ?? throw new ArgumentNullException(nameof(action));
       }
 
       protected override void OnParseComplete(OptionContext c)
@@ -154,9 +152,7 @@ namespace CommandLine.Options
       public ActionOption(string prototype, string description, Action<T> action)
         : base(prototype, description, 1)
       {
-        if (action == null)
-          throw new ArgumentNullException(nameof(action));
-        this.action = action;
+	      this.action = action ?? throw new ArgumentNullException(nameof(action));
       }
 
       protected override void OnParseComplete(OptionContext c)
@@ -172,9 +168,7 @@ namespace CommandLine.Options
       public ActionOption(string prototype, string description, OptionAction<TKey, TValue> action)
         : base(prototype, description, 2)
       {
-        if (action == null)
-          throw new ArgumentNullException(nameof(action));
-        this.action = action;
+	      this.action = action ?? throw new ArgumentNullException(nameof(action));
       }
 
       protected override void OnParseComplete(OptionContext c)
@@ -287,29 +281,30 @@ namespace CommandLine.Options
       if (!GetOptionParts(argument, out f, out n, out s, out v))
         return false;
 
-      if (Contains(n))
-      {
-        var p = this[n];
-        c.OptionName = f + n;
-        c.Option = p;
-        switch (p.OptionValueType)
-        {
-          case OptionValueType.None:
-            c.OptionValues.Add(n);
-            c.Option.Invoke(c);
-            break;
-          case OptionValueType.Optional:
-          case OptionValueType.Required:
-            ParseValue(v, c);
-            break;
-          default:
-            throw new ArgumentOutOfRangeException();
-        }
-        return true;
-      }
-      // no match; is it a bool option?
+	    if (!Contains(n))
+	    {
+		    return ParseBool(argument, n, c) || ParseBundledValue(f, string.Concat(n + s + v), c);
+	    }
+
+	    var p = this[n];
+	    c.OptionName = f + n;
+	    c.Option = p;
+	    switch (p.OptionValueType)
+	    {
+		    case OptionValueType.None:
+			    c.OptionValues.Add(n);
+			    c.Option.Invoke(c);
+			    break;
+		    case OptionValueType.Optional:
+		    case OptionValueType.Required:
+			    ParseValue(v, c);
+			    break;
+		    default:
+			    throw new ArgumentOutOfRangeException();
+	    }
+	    return true;
+	    // no match; is it a bool option?
       // is it a bundled option?
-      return ParseBool(argument, n, c) || ParseBundledValue(f, string.Concat(n + s + v), c);
     }
 
     private void ParseValue(string option, OptionContext c)
@@ -607,24 +602,26 @@ namespace CommandLine.Options
       var sep = -1;
       for (var i = start; i < end; ++i)
       {
-        switch (description[i])
-        {
-          case ' ':
-          case '\t':
-          case '\v':
-          case '-':
-          case ',':
-          case '.':
-          case ';':
-            sep = i;
-            break;
-          case '\n':
-            return i;
-        }
-      }
-      if (sep == -1 || end == description.Length)
+				switch (description[i])
+				{
+					case ' ':
+					case '\t':
+					case '\v':
+					case '-':
+					case ',':
+					case '.':
+					case ';':
+						sep = i;
+						break;
+					case '\n':
+						return i;
+					default:
+						break;
+				}
+			}
+			if (sep == -1 || end == description.Length)
         return end;
       return sep;
-    }
-  }
+		}
+	}
 }
