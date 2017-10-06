@@ -1,9 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <AssemblyTitle>CommandLine.Options</AssemblyTitle>
     <VersionPrefix>0.0.1</VersionPrefix>
-    <TargetFramework>netstandard1.6</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>CommandLine.Options</AssemblyName>
     <PackageId>CommandLine.Options</PackageId>
     <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
@@ -18,9 +17,8 @@
     <PackageLicenseUrl>https://github.com/Siliconrob/CommandLine.Options/blob/master/LICENSE.md</PackageLicenseUrl>
     <Version>0.0.2</Version>
   </PropertyGroup>
-
   <ItemGroup>
+    <PackageReference Include="NETStandard.Library" Version="2.0.0" />
     <PackageReference Include="System.ComponentModel.TypeConverter" Version="4.3.0" />
   </ItemGroup>
-
 </Project>
