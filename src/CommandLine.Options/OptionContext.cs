@@ -1,21 +1,21 @@
 namespace CommandLine.Options
 {
-  public class OptionContext
-  {
-    public OptionContext(OptionSet set)
+    public class OptionContext
     {
-      OptionSet = set;
-      OptionValues = new OptionValueCollection(this);
+        public OptionContext(OptionSet set)
+        {
+            OptionSet = set;
+            OptionValues = new OptionValueCollection(this);
+        }
+
+        public Option Option { get; set; }
+
+        public string OptionName { get; set; }
+
+        public int OptionIndex { get; set; }
+
+        public OptionSet OptionSet { get; }
+
+        public OptionValueCollection OptionValues { get; }
     }
-
-    public Option Option { get; set; }
-
-    public string OptionName { get; set; }
-
-    public int OptionIndex { get; set; }
-
-    public OptionSet OptionSet { get; }
-
-    public OptionValueCollection OptionValues { get; }
-  }
 }

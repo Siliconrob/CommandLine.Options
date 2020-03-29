@@ -2,7 +2,7 @@
   <PropertyGroup>
     <AssemblyTitle>CommandLine.Options</AssemblyTitle>
     <VersionPrefix>0.0.1</VersionPrefix>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <AssemblyName>CommandLine.Options</AssemblyName>
     <PackageId>CommandLine.Options</PackageId>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>

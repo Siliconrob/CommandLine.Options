@@ -1,8 +1,9 @@
 namespace CommandLine.Options
 {
-  public enum OptionValueType {
-    None, 
-    Optional,
-    Required
-  }
+    public enum OptionValueType
+    {
+        None,
+        Optional,
+        Required
+    }
 }
